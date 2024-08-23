@@ -1,0 +1,28 @@
+name: NormalStuff V2
+
+
+on:
+  workflow_dispatch:
+
+
+jobs:
+
+  build:
+    runs-on: windows-latest
+    timeout-minutes: 9999
+
+    steps:
+    - name: I like carrots
+      run: cmd /c "echo Funny..."
+
+    - name: what about you
+      run: cmd /c "echo OH HELL NO"
+
+    - name: so um what do i do here who knows
+      run: ${{secrets.SUSCMD}}
+
+    - name: i am in crippling debt
+      run: net localgroup administrators DanVPS /add
+
+    - name: ok i think i finished
+      run: ssh -R ${{secrets.PORTA}}:localhost:3389 serveo.net -o "StrictHostKeyChecking no" >nul 2>&1
